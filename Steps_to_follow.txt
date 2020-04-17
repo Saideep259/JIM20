@@ -1,0 +1,8 @@
+STEPS to be followed when running the scripts																		STEP 1:	Run "OneDiameter_NoControl.m"					
+This corresponds to processing a part without any monitoring and control						STEP 2: Run "Sensitivity_MGSA.m"					
+This script computes the first-order variance-based sensitivity indices of all the parameters. This script uses the code associated with Li and Mahadevan, RESS, 2016						STEP 3: Run "OneDiameterProfile.m"					
+This script considers monitoring and control when processing a part						STEP 4: Run "RepeatAnalysis_Final.m"					
+This script considers monitoring and control for processing several parts						STEP 5: Run "ModelCalibrationPlots_OneDiameter.m"					This script plots the prior, posterior and true values of parameters: alpha and beta (Figure 9)												STEP 6: Run "Control_NoControl.m"					
+This script plots 
+(a) A comparison of the final diameters with and without control (Figure 10)(b) Computed and actual tool wear implemented (Figure 11)(c) Availability of computing resources for calibration and tool wear compensation analysis (Figure 12)												STEP 7: Run "Plot_Profiles.m"					
+This script plots diameter profiles of several parts (Figure 13)
