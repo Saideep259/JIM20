@@ -69,7 +69,6 @@ betaw_sam = zeros(nsam, ntimesteps+2);
 alphaw_sam(:,1) = normrnd(alphaw_mean, alphaw_std, nsam, 1);
 betaw_sam(:,1) = normrnd(betaw_mean, betaw_std,nsam,1);
 
-%% 
 
 depth = DepthCut(Din, Df, comp);
 timepart = TimePart(Din, depth, L, V, f);
@@ -127,16 +126,20 @@ for k=1:nrepeat
     % 2 tries --> 1 success
     % 0 success, 1 failure
 
-    %% Laser to Comm
+    % Laser to Comm
 
     Rel_laser_computer = Relcomm*Relcomm + Relcomm*(1-Relcomm)*Rel_fail + (1-Relcomm)*Rel_fail*Relcomm; % Laser to Computer
     Rel_computer_comp = Relcomm + (1-Relcomm)*Rel_fail; % Computer to Control unit
-
+    
+    % Generate random samples based on the calculated reliability values
     Rel_laser_computer_sam = randsample([0 1], ntimesteps+1, 'true',[Rel_laser_computer 1-Rel_laser_computer]);
     Rel_computer_comp_sam = randsample([0 1], ntimesteps+1, 'true',[Rel_computer_comp 1-Rel_computer_comp]);
     Rel_resource_sam = randsample([0 1], ntimesteps+1, 'true',[RelResource 1-RelResource]);
-
+    
+    % Tool wear compensation
     Total_comp_rel = Rel_laser_computer_sam+Rel_computer_comp_sam+Rel_resource_sam;
+    
+    % Calibration analysis
     Total_calibration_rel = Rel_laser_computer_sam + Rel_computer_comp_sam;
 
     %% Loop through all time steps

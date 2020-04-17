@@ -1,6 +1,5 @@
-% Repeat analysis including all aleatory and epistemic uncertainty sources
-
-% Aleatory: Computational, theta, comp
+% Repeat analysis multiple times
+% This is equivalent to producing multiple parts
 
 clear; close all;clc
 

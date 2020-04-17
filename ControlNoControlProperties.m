@@ -1,4 +1,6 @@
 function ControlNoControlProperties(X1, Y1, X2, Y2, X3, YMatrix1)
+%  Figure properties to plot diameter profiles with and without control
+
 %  CREATEFIGURE(X1, Y1, X2, Y2, X3, YMATRIX1)
 %  X1:  vector of x data
 %  Y1:  vector of y data

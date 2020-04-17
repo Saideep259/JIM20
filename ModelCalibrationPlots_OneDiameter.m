@@ -1,4 +1,6 @@
 % Model Calibration Plots
+% The script plots the prior, posterior, and true values of alpha and beta
+% parameters
 
 clear; close all; clc
 

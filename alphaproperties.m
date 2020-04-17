@@ -1,4 +1,7 @@
 function alphaproperties(X1, Y1, X2, Y2, X3, Y3)
+% Figure properties to plot the prior, posterior and true values of model
+% parameters
+
 %  CREATEFIGURE(X1, Y1, X2, Y2, X3, Y3)
 %  X1:  vector of x data
 %  Y1:  vector of y data

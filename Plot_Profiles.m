@@ -1,4 +1,4 @@
-%% Plotting several diameter profiles  considering aleatory uncertainty
+%% Plotting diameter profiles when multiple parts are produced
 
 clear; close all;clc
 

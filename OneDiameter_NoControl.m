@@ -1,4 +1,5 @@
-% No control
+% Calculate the diameter profile in the absence of any monitoring and
+% control
 
 clear; close all;clc
 
